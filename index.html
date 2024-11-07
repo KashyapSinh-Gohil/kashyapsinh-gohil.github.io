@@ -24,6 +24,10 @@
             height: 400px;
             perspective: 1000px;
             margin: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2); /* Transparency */
+            backdrop-filter: blur(10px); /* Blur effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
         }
 
         .card-inner {
@@ -34,7 +38,6 @@
             transition: transform 0.6s;
             transform-style: preserve-3d;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff, #00ffff, #ffff00);
             background-size: 600% 600%;
             animation: gradient 5s ease infinite;
@@ -60,7 +63,7 @@
         }
 
         .card-front {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.7); /* Slight transparency */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -80,7 +83,7 @@
         }
 
         .card-back {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.7); /* Slight transparency */
             color: #fff;
             display: flex;
             justify-content: center;
@@ -154,7 +157,7 @@
     <div class="card">
         <div class="card-inner">
             <div class="card-front">
-                <img alt="Portrait of Kashyapsinh Gohil" src="https://via.placeholder.com/150" />
+                <img alt="Portrait of Kashyapsinh Gohil" src="https://photos.app.goo.gl/zjmgdYyhZjyEf6ec9" />
                 <h2>Kashyapsinh Gohil</h2>
             </div>
             <div class="card-back">
@@ -164,4 +167,3 @@
     </div>
 </body>
 </html>
-
