@@ -1,202 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Social Media Cards</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portrait Card</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            padding: 0 10px;
+        }
 
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #000;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      height: 100vh;
-      margin: 0;
-    }
+        .card {
+            width: 100%;
+            max-width: 350px;
+            height: 400px;
+            perspective: 1000px;
+            margin: 20px;
+        }
 
-    .card {
-      width: 100%;
-      max-width: 300px; /* Ensure card doesn't get too large */
-      perspective: 1000px;
-      transition: transform 0.3s ease-in-out;
-    }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff, #00ffff, #ffff00);
+            background-size: 600% 600%;
+            animation: gradient 5s ease infinite;
+        }
 
-    .card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-      border-radius: 10px;
-    }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-    .card:hover .card-inner {
-      transform: rotateY(180deg);
-    }
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
 
-    .card-front, .card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 10px;
-      backdrop-filter: blur(10px);
-      background-color: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-    .card-front i {
-      font-size: 50px;
-      color: #fff;
-    }
+        .card-front {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .card-back {
-      transform: rotateY(180deg);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+        .card-front img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
 
-    .card-back a {
-      text-decoration: none;
-      color: #fff;
-      background-color: #007bff;
-      padding: 10px 20px;
-      border-radius: 5px;
-    }
+        .card-front h2 {
+            margin: 20px 0 0;
+            font-size: 24px;
+            color: #333;
+        }
 
-    .card-back a:hover {
-      background-color: #0056b3;
-    }
+        .card-back {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotateY(180deg);
+        }
 
-    /* About Section */
-    .about-section {
-      background-color: rgba(255, 255, 255, 0.1);
-      width: 80%;
-      max-width: 600px;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      color: #ffffff;
-    }
+        .card-back a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
 
-    .about-section h3 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
+        .card-back a:hover {
+            background-color: #0056b3;
+        }
 
-    .about-section p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: -40px;
+            right: -40px;
+            bottom: -40px;
+            z-index: -1;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff, #00ffff, #ffff00);
+            background-size: 400% 400%;
+            filter: blur(30px);
+            animation: gradient 5s ease infinite;
+        }
 
-    /* Responsive Adjustments */
-    @media (max-width: 1024px) {
-      .card {
-        width: 80%;
-        max-width: 350px;
-      }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                width: 90%; /* Adjust the card size for smaller screens */
+                max-width: 280px; /* Maximum width */
+            }
 
-      .about-section {
-        width: 90%;
-        padding: 15px;
-      }
-    }
+            .card-front h2 {
+                font-size: 20px;
+            }
 
-    @media (max-width: 768px) {
-      .card {
-        width: 90%;
-        max-width: 300px;
-      }
+            .card-front img {
+                width: 130px;
+                height: 130px;
+            }
+        }
 
-      .about-section {
-        width: 95%;
-        padding: 10px;
-      }
+        @media (max-width: 480px) {
+            .card {
+                width: 100%; /* Full width for very small screens */
+                max-width: 250px; /* Maximum width */
+            }
 
-      .about-section h3 {
-        font-size: 1.5rem;
-      }
+            .card-front h2 {
+                font-size: 18px;
+            }
 
-      .about-section p {
-        font-size: 0.9rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .card {
-        width: 100%;
-        max-width: 280px;
-      }
-
-      .about-section {
-        width: 100%;
-        padding: 10px;
-      }
-
-      .about-section h3 {
-        font-size: 1.25rem;
-      }
-
-      .about-section p {
-        font-size: 0.85rem;
-      }
-    }
-  </style>
+            .card-front img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Social Media Cards Section -->
-  <div class="card">
-    <div class="card-inner">
-      <!-- Front -->
-      <div class="card-front">
-        <i class="fab fa-facebook"></i>
-      </div>
-      <!-- Back -->
-      <div class="card-back">
-        <a href="https://facebook.com" target="_blank">Visit Facebook</a>
-      </div>
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <img alt="Portrait of Kashyapsinh Gohil" src="https://via.placeholder.com/150" />
+                <h2>Kashyapsinh Gohil</h2>
+            </div>
+            <div class="card-back">
+                <a href="links.html" target="_blank">Contact Me</a>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <div class="card">
-    <div class="card-inner">
-      <!-- Front -->
-      <div class="card-front">
-        <i class="fab fa-twitter"></i>
-      </div>
-      <!-- Back -->
-      <div class="card-back">
-        <a href="https://twitter.com" target="_blank">Visit Twitter</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- About Section -->
-  <div class="about-section">
-    <h3>About Us</h3>
-    <p>This is a responsive website layout using CSS Flexbox and Media Queries. It is designed to look great on all screen sizes from mobile to desktop.</p>
-  </div>
-
 </body>
 </html>
 
