@@ -1,0 +1,152 @@
+<html>
+<head>
+  <title>Social Media Cards</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .card {
+      width: 200px;
+      height: 200px;
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      border-radius: 10px;
+      background: transparent;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent with blur */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-front i {
+      font-size: 50px;
+      color: #fff;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-back a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #007bff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .card-back a:hover {
+      background-color: #0056b3;
+    }
+
+    /* Background Animation */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: -40px;
+      right: -40px;
+      bottom: -40px;
+      z-index: -1;
+      border-radius: 50px;
+      background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff, #00ffff, #ffff00);
+      background-size: 400% 400%;
+      filter: blur(30px);
+      opacity: 0.5;
+      animation: gradient 5s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- GitHub Card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <i class="fab fa-github"></i>
+      </div>
+      <div class="card-back">
+        <a href="https://github.com/KashyapSinh-Gohil" target="_blank">View GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- LinkedIn Card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <i class="fab fa-linkedin"></i>
+      </div>
+      <div class="card-back">
+        <a href="www.linkedin.com/in/kashyapsinh-gohil" target="_blank">View LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reddit Card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <i class="fab fa-reddit"></i>
+      </div>
+      <div class="card-back">
+        <a href="https://www.reddit.com/user/Kashyapsinh_Gohil" target="_blank">View Reddit</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- X (Twitter) Card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <i class="fab fa-twitter"></i>
+      </div>
+      <div class="card-back">
+        <a href="https://x.com/_KashyapSinh" target="_blank">View X (Twitter)</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
