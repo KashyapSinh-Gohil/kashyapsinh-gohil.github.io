@@ -14,7 +14,7 @@
         body {
             font-family: 'Roboto', sans-serif;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
@@ -29,9 +29,9 @@
             perspective: 1000px;
             margin: 20px;
             border-radius: 10px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.2); /* Transparency */
+            backdrop-filter: blur(10px); /* Blur effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
         }
 
         .card-inner {
@@ -67,7 +67,7 @@
         }
 
         .card-front {
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.7); /* Slight transparency */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -87,7 +87,7 @@
         }
 
         .card-back {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.7); /* Slight transparency */
             color: #fff;
             display: flex;
             justify-content: center;
@@ -123,10 +123,11 @@
             animation: gradient 5s ease infinite;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             .card {
-                width: 90%;
-                max-width: 280px;
+                width: 90%; /* Adjust the card size for smaller screens */
+                max-width: 280px; /* Maximum width */
             }
 
             .card-front h2 {
@@ -141,8 +142,8 @@
 
         @media (max-width: 480px) {
             .card {
-                width: 100%;
-                max-width: 250px;
+                width: 100%; /* Full width for very small screens */
+                max-width: 250px; /* Maximum width */
             }
 
             .card-front h2 {
@@ -157,13 +158,12 @@
     </style>
 </head>
 <body>
-    
     <div class="card">
         <div class="card-inner">
             <div class="card-front">
                 <img alt="Portrait of Kashyapsinh Gohil" src="https://github.com/KashyapSinh-Gohil/kashyapsinh-gohil.github.io/blob/95f73f0acaac9fbf916831fc084fefd75ee9d750/portrait.jpg?raw=true" />
                 <h2>Kashyapsinh Gohil</h2>
-                <h4>"Consistency creates credibility."</h4>
+                 <h4>"Consistency creates credibility."</h4>
             </div>
             <div class="card-back">
                 <a href="links.html" target="_blank">Contact Me</a>
