@@ -85,6 +85,13 @@
       background-color: #0056b3;
     }
 
+    /* Add custom styles for MeeraCV text */
+    .card-front span {
+      font-size: 24px; /* Adjust font size */
+      color: #fff; /* White text color */
+      font-weight: bold; /* Bold text */
+    }
+
     /* Background Animation */
     .card::before {
       content: '';
@@ -133,62 +140,6 @@
       color: #fff;
     }
 
-    /* Responsive Design for different screen sizes */
-    @media (max-width: 1200px) {
-      .card {
-        width: 180px;
-        height: 180px;
-      }
-      .about-section {
-        width: 90%;
-        padding: 15px;
-      }
-    }
-
-    @media (max-width: 992px) {
-      .card {
-        width: 150px;
-        height: 150px;
-      }
-      .about-section {
-        width: 95%;
-        padding: 10px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .card {
-        width: 120px;
-        height: 120px;
-      }
-      .about-section {
-        width: 100%;
-        padding: 10px;
-      }
-      .about-section h3 {
-        font-size: 20px;
-      }
-      .about-section p {
-        font-size: 14px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .card {
-        width: 100px;
-        height: 100px;
-      }
-      .about-section {
-        width: 100%;
-        padding: 8px;
-      }
-      .about-section h3 {
-        font-size: 18px;
-      }
-      .about-section p {
-        font-size: 12px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -236,6 +187,18 @@
       </div>
       <div class="card-back">
         <a href="https://x.com/_KashyapSinh" target="_blank">View X (Twitter)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MeeraCV Card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <span>MeeraCV</span> 
+      </div>
+      <div class="card-back">
+        <a href="https://kashyapsinh-gohil.github.io/Meera/" target="_blank">View MeeraCV</a>
       </div>
     </div>
   </div>
