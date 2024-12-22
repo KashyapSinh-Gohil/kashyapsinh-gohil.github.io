@@ -1,0 +1,1080 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Kashyap Sinh Gohil - Data Analytics and AI Engineer specializing in Python, Machine Learning, and Cloud Technologies">
+  <meta name="keywords" content="Kashyap Sinh Gohil, Data Analytics, AI Engineer, Python Developer, Machine Learning, Cloud Computing">
+  <meta name="author" content="KashyapSinh Gohil">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="KashyapSinh Gohil - Data Analytics & AI Portfolio">
+  <meta property="og:description" content="Professional portfolio showcasing data analytics and AI projects">
+  <meta property="og:image" content="your-profile-photo.jpg">
+  <meta property="og:url" content="https://kashyapsinh-gohil.github.io">
+  <title>Kashyap Sinh Gohil | Data Analytics & AI Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+
+ @keyframes pointerAnimation {
+   0% {
+     transform: rotate(0deg);
+   }
+   50% {
+     transform: rotate(-15deg);
+   }
+   100% {
+     transform: rotate(0deg);
+   }
+ }
+
+.pointer {
+  animation: pointerAnimation 2s infinite;
+}
+ 
+    :root {
+      --dark-blue: #0a192f;
+      --darker-blue: #050d1a;
+      --accent-blue: #64ffda;
+    }
+
+    /* Updated font settings */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, var(--darker-blue), var(--dark-blue));
+    }
+
+    h1, h2, h3, .typing-animation {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* Faster typing animation */
+    .typing-animation {
+      border-right: 3px solid var(--accent-blue);
+      white-space: nowrap;
+      overflow: hidden;
+      margin: 0 auto;
+      animation: 
+        typing 2s steps(40, end),
+        blink-caret .5s step-end infinite;
+    }
+
+    /* Faster animations */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: var(--accent-blue) }
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px #64ffda; }
+      50% { box-shadow: 0 0 15px #64ffda; }
+      100% { box-shadow: 0 0 5px #64ffda; }
+    }
+
+    .glowing {
+      animation: glow 1.5s infinite;
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      transition: transform 0.2s ease;
+    }
+
+    /* Update the slide-in animation speed */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Update the gradient animation speed */
+    @keyframes gradient {
+      0% { background-position: 0% center; }
+      50% { background-position: 100% center; }
+      100% { background-position: 0% center; }
+    }
+
+    /* Profile image hover effect */
+    .group:hover img {
+      transform: scale(1.02);
+      transition: transform 0.3s ease;
+    }
+
+    /* Smooth shadow transition */
+    .group {
+      transition: all 0.3s ease;
+    }
+
+    /* Unified shortcut button styles */
+    .shortcut-btn {
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 76, 41, 0.8);
+      border-radius: 0.75rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .shortcut-btn:hover {
+      color: white;
+      background-color: rgba(230, 62, 28, 0.5);
+      transform: scale(1.1);
+    }
+
+    .shortcut-btn.active {
+      background-color: #ff4c29;
+      color: white;
+    }
+
+    .shortcut-btn i {
+      font-size: 1.25rem;
+      transition: transform 0.3s ease;
+    }
+
+    .shortcut-btn:hover i {
+      transform: scale(1.1);
+    }
+
+    /* Updated tooltip styles */
+    .shortcut-btn::after {
+      content: attr(title);
+      position: absolute;
+      right: 120%;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(10, 25, 47, 0.95);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(100, 255, 218, 0.1);
+    }
+
+    .shortcut-btn:hover::after {
+      opacity: 1;
+      right: 110%;
+    }
+
+    /* Add padding to main to account for the new top bar */
+    main {
+      padding-top: 2.5rem;
+    }
+    
+    /* Tooltip for social links */
+    .social-links a {
+      position: relative;
+    }
+    
+    .social-links a::after {
+      content: attr(title);
+      position: absolute;
+      bottom: -2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.25rem 0.5rem;
+      background: var(--darker-blue);
+      color: white;
+      font-size: 0.75rem;
+      border-radius: 0.25rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.2s ease;
+    }
+    
+    .social-links a:hover::after {
+      opacity: 1;
+      bottom: -1.75rem;
+    }
+
+    .music-control {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(10, 25, 47, 0.8);
+      padding: 8px 16px;
+      border-radius: 50px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(100, 255, 218, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .music-control:hover {
+      background: rgba(10, 25, 47, 0.9);
+    }
+
+    .music-btn {
+      background: none;
+      border: none;
+      color: #64ffda;
+      cursor: pointer;
+      padding: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .music-btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* Mobile Responsive Styles */
+    @media (max-width: 768px) {
+      /* Adjust hero section for mobile */
+      #hero .w-80 {
+        width: 60vw;
+        height: 60vw;
+        max-width: 280px;
+        max-height: 280px;
+      }
+
+      /* Adjust typography for mobile */
+      .text-4xl {
+        font-size: clamp(1.5rem, 5vw, 1.75rem);
+      }
+      
+      .text-3xl {
+        font-size: clamp(1.25rem, 4vw, 1.5rem);
+      }
+
+      .text-2xl {
+        font-size: clamp(1.125rem, 3.5vw, 1.25rem);
+      }
+
+      .text-xl {
+        font-size: clamp(1rem, 3vw, 1.125rem);
+      }
+
+      /* Adjust padding and margins for mobile */
+      section {
+        padding: clamp(2rem, 5vh, 3rem) clamp(1rem, 5vw, 2rem) !important;
+      }
+
+      .px-8 {
+        padding-left: clamp(1rem, 5vw, 2rem) !important;
+        padding-right: clamp(1rem, 5vw, 2rem) !important;
+      }
+
+      /* Improved grid layouts for mobile */
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+        gap: clamp(1rem, 3vw, 1.5rem) !important;
+      }
+
+      /* Enhanced shortcut menu for mobile */
+      .shortcut-menu {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        transform-origin: bottom right;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+      }
+
+      .shortcut-menu:hover {
+        transform: scale(1);
+      }
+
+      .shortcut-btn {
+        width: clamp(2.25rem, 8vw, 2.5rem);
+        height: clamp(2.25rem, 8vw, 2.5rem);
+        font-size: clamp(0.875rem, 3vw, 1rem);
+      }
+
+      /* Improved card layouts */
+      .skill-card,
+      .certificate-card,
+      .project-card {
+        padding: clamp(1rem, 4vw, 1.5rem) !important;
+      }
+
+      /* Better spacing for buttons and links */
+      .space-x-4 {
+        gap: clamp(0.5rem, 2vw, 1rem);
+      }
+
+      /* Adjust top navigation for mobile */
+      .fixed.top-0 {
+        padding: clamp(0.5rem, 2vh, 1rem) clamp(1rem, 5vw, 2rem);
+      }
+
+      /* Adjust music control for mobile */
+      .music-control {
+        bottom: clamp(4rem, 10vh, 5rem);
+        left: clamp(1rem, 5vw, 2rem);
+        transform: scale(0.9);
+      }
+    }
+
+    /* Enhanced tablet-specific adjustments */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+      }
+
+      section {
+        padding: clamp(3rem, 6vh, 4rem) clamp(2rem, 6vw, 3rem) !important;
+      }
+
+      .shortcut-menu {
+        transform: scale(0.95);
+      }
+    }
+
+    /* Dynamic sizing for larger screens */
+    @media (min-width: 1025px) {
+      .container {
+        max-width: min(90vw, 1200px);
+        margin: 0 auto;
+      }
+
+      section {
+        padding: clamp(4rem, 8vh, 6rem) 0;
+      }
+
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      }
+    }
+
+    /* Improved landscape mode adjustments */
+    @media (max-height: 600px) and (orientation: landscape) {
+      #hero {
+        height: auto !important;
+        min-height: 100vh;
+        padding: clamp(2rem, 6vh, 3rem) 0;
+      }
+
+      #hero .w-80 {
+        width: clamp(120px, 40vw, 200px);
+        height: clamp(120px, 40vw, 200px);
+      }
+
+      .shortcut-menu {
+        transform: scale(0.8);
+      }
+
+      section {
+        padding: clamp(2rem, 6vh, 3rem) clamp(1rem, 5vw, 2rem) !important;
+      }
+    }
+
+    /* Smart container sizing */
+    .max-w-6xl {
+      width: min(90vw, 72rem);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Fluid typography */
+    :root {
+      --fluid-min-width: 320;
+      --fluid-max-width: 1200;
+      --fluid-min-size: 14;
+      --fluid-max-size: 16;
+      --fluid-min-scale: 1.2;
+      --fluid-max-scale: 1.333;
+    }
+
+    /* Dynamic spacing utilities */
+    .p-dynamic {
+      padding: clamp(1rem, 3vw, 2rem);
+    }
+
+    .m-dynamic {
+      margin: clamp(1rem, 3vw, 2rem);
+    }
+
+    .gap-dynamic {
+      gap: clamp(1rem, 2vw, 2rem);
+    }
+
+    /* Enhanced touch targets for mobile */
+    @media (hover: none) and (pointer: coarse) {
+      .shortcut-btn,
+      .music-btn,
+      a {
+        min-height: 44px;
+        min-width: 44px;
+        padding: clamp(0.5rem, 2vw, 1rem);
+      }
+
+      .shortcut-menu {
+        touch-action: manipulation;
+      }
+    }
+
+    /* Hide the shortcut menu on screens smaller than 768px */
+    @media (max-width: 768px) {
+        .shortcut-menu {
+            display: none; /* Hides the button panel */
+        }
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans leading-relaxed">
+  <!-- Add this at the very top of your body tag -->
+  <div id="top"></div>
+
+  <!-- Add this right after the opening body tag -->
+  <div class="fixed bottom-8 right-8 z-50 md:bottom-8 md:right-8 shortcut-menu">
+    <div class="bg-blue-900/90 backdrop-blur-md rounded-2xl shadow-2xl border border-blue-400/20">
+      <div class="flex flex-col space-y-2 p-3 md:space-y-3 md:p-4">
+        <!-- Updated home button with hero section ID -->
+        <a href="#hero" class="shortcut-btn" id="homeBtn" title="Back to Top">
+          <i class="fas fa-chevron-up"></i>
+        </a>
+        <div class="h-px bg-blue-400/20"></div>
+        <a href="#about" class="shortcut-btn" title="About">
+          <i class="fas fa-user"></i>
+        </a>
+        <a href="#skills" class="shortcut-btn" title="Skills">
+          <i class="fas fa-code"></i>
+        </a>
+        <a href="#certificates" class="shortcut-btn" title="Certificates">
+          <i class="fas fa-certificate"></i>
+        </a>
+        <a href="#projects" class="shortcut-btn" title="Projects">
+          <i class="fas fa-project-diagram"></i>
+        </a>
+        <a href="#contact" class="shortcut-btn" title="Contact">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Updated top navigation -->
+  <div class="fixed top-0 left-0 right-0 bg-blue-900/90 backdrop-blur-md z-50 border-b border-blue-400/20">
+    <div class="max-w-6xl mx-auto px-3 py-2 md:px-4 md:py-2">
+      <div class="flex justify-between md:justify-end items-center gap-dynamic">
+        <!-- Email -->
+        <a href="mailto:k.agohil000@gmail.com" 
+           class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center text-xs md:text-sm">
+          <i class="fas fa-envelope mr-2"></i>
+          <span class="hidden md:inline">k.agohil000@gmail.com</span>
+        </a>
+        
+        <!-- Social Links -->
+        <div class="flex items-center gap-dynamic">
+          <a href="https://github.com/KashyapSinh-Gohil" 
+             class="text-gray-300 hover:text-blue-400 transition-colors duration-300"
+             target="_blank" 
+             title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/kashyapsinh-gohil/" 
+             class="text-gray-300 hover:text-blue-400 transition-colors duration-300"
+             target="_blank" 
+             title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://x.com/_KashyapSinh" 
+             class="text-gray-300 hover:text-blue-400 transition-colors duration-300"
+             target="_blank" 
+             title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.reddit.com/user/Kashyapsinh_Gohil" 
+             class="text-gray-300 hover:text-blue-400 transition-colors duration-300"
+             target="_blank" 
+             title="Reddit">
+            <i class="fab fa-reddit"></i>
+          </a>
+          <a href="https://kashyapsinh-gohil.github.io/Solveit-Web/" 
+             class="text-gray-300 hover:text-blue-400 transition-colors duration-300"
+             target="_blank" 
+             title="Solveit Documentation">
+            <i class="fas fa-book"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header remains same -->
+
+  <main class="mt-24">
+    <!-- Enhanced Hero Section -->
+    <section id="hero" class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-[var(--darker-blue)] to-[var(--dark-blue)] text-center p-dynamic">
+      <div class="w-60 h-60 md:w-80 md:h-80 mb-8 relative group">
+        <div class="absolute inset-0 bg-blue-400/10 rounded-full backdrop-blur-sm group-hover:bg-blue-400/20 transition-all duration-300"></div>
+        <img 
+          src="your-profile-photo.jpg" 
+          alt="Kashyap Sinh Gohil" 
+          class="w-full h-full object-cover rounded-full border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300 filter brightness-105"
+        >
+        <div class="absolute inset-0 rounded-full shadow-xl shadow-blue-400/10 group-hover:shadow-blue-400/20 transition-all duration-300"></div>
+      </div>
+      
+      <!-- Typing animation container -->
+      <div class="typing-container mb-4">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-blue-400 typing-animation">
+          I am Kashyapsinh Gohil
+        </h2>
+      </div>
+      
+      <!-- Add a role that appears after typing -->
+      <p class="text-xl mb-8 text-gray-300 max-w-2xl opacity-0 animate-[fadeIn_0.8s_ease-in_2s_forwards]">
+        Data Analyst
+      </p>
+      
+      <!-- Buttons with improved spacing -->
+      <div class="flex flex-wrap justify-center gap-dynamic opacity-0 animate-[fadeIn_0.8s_ease-in_2.5s_forwards]">
+        <a href="#projects" class="bg-blue-500 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg glowing hover:bg-blue-400 transition duration-300">
+          <i class="fas fa-project-diagram mr-2"></i>View Projects
+        </a>
+        <a href="#contact" class="border border-blue-500 text-blue-400 px-4 py-2 md:px-6 md:py-3 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300">
+          <i class="fas fa-envelope mr-2"></i>Contact Me
+        </a>
+      </div>
+    </section>
+
+    <!-- Updated sections with dynamic spacing -->
+    <section id="about" class="py-16 p-dynamic bg-gradient-to-b from-[var(--dark-blue)] to-blue-900 text-gray-300">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-blue-400 mb-12 text-center">About Me</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-dynamic items-center">
+          <!-- About Content -->
+          <div class="space-y-6">
+            <div class="bg-blue-900/20 p-6 rounded-lg backdrop-blur-sm">
+              <h3 class="text-2xl font-bold text-blue-300 mb-4">Who I Am</h3>
+              <p class="text-gray-300 leading-relaxed">
+                I am a passionate Data Analytics and AI enthusiast with a strong foundation in programming and cloud technologies. 
+                Currently pursuing my BCA in Data Analytics at Amity University Online, I focus on transforming complex data into actionable insights.
+              </p>
+            </div>
+
+            <div class="bg-blue-900/20 p-6 rounded-lg backdrop-blur-sm">
+              <h3 class="text-2xl font-bold text-blue-300 mb-4">What I Do</h3>
+              <ul class="space-y-3 text-gray-300">
+                <li class="flex items-start">
+                  <i class="fas fa-analytics text-blue-400 mt-1 mr-3"></i>
+                  <span>Develop data-driven solutions using advanced analytics and machine learning</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-code text-blue-400 mt-1 mr-3"></i>
+                  <span>Create efficient and scalable applications in Python, C, and C++</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-cloud text-blue-400 mt-1 mr-3"></i>
+                  <span>Work with cloud platforms to build and deploy AI solutions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Education & Goals -->
+          <div class="space-y-6">
+            <div class="bg-blue-900/20 p-6 rounded-lg backdrop-blur-sm">
+              <h3 class="text-2xl font-bold text-blue-300 mb-4">Education</h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-lg font-semibold text-blue-400">BCA in Data Analytics</h4>
+                  <p class="text-gray-400">Amity University Online</p>
+                  <p class="text-gray-400">2023 - Present</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-blue-900/20 p-6 rounded-lg backdrop-blur-sm">
+              <h3 class="text-2xl font-bold text-blue-300 mb-4">Current Focus</h3>
+              <ul class="space-y-3 text-gray-300">
+                <li class="flex items-start">
+                  <i class="fas fa-brain text-blue-400 mt-1 mr-3"></i>
+                  <span>Advancing my knowledge in AI and Machine Learning</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-project-diagram text-blue-400 mt-1 mr-3"></i>
+                  <span>Building innovative projects with real-world applications</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-globe text-blue-400 mt-1 mr-3"></i>
+                  <span>Contributing to open-source projects and the developer community</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personal Interests -->
+      <div class="mt-12 max-w-6xl mx-auto">
+        <div class="bg-blue-900/20 p-6 rounded-lg backdrop-blur-sm">
+          <h3 class="text-2xl font-bold text-blue-300 mb-4 text-center">Beyond Technology</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div>
+              <i class="fas fa-book text-3xl text-blue-400 mb-3"></i>
+              <h4 class="text-lg font-semibold text-blue-300 mb-2">Continuous Learning</h4>
+              <p class="text-gray-400">Always exploring new technologies and methodologies</p>
+            </div>
+            <div>
+              <i class="fas fa-users text-3xl text-blue-400 mb-3"></i>
+              <h4 class="text-lg font-semibold text-blue-300 mb-2">Community Building</h4>
+              <p class="text-gray-400">Passionate about knowledge sharing and mentoring</p>
+            </div>
+            <div>
+              <i class="fas fa-lightbulb text-3xl text-blue-400 mb-3"></i>
+              <h4 class="text-lg font-semibold text-blue-300 mb-2">Innovation</h4>
+              <p class="text-gray-400">Driven by creativity and problem-solving</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Skills Section -->
+    <section id="skills" class="py-16 px-8 bg-gradient-to-b from-blue-900 to-black text-gray-300">
+      <h2 class="text-3xl font-bold text-blue-400 mb-12 text-center">Technical Expertise</h2>
+      
+      <!-- Core Skills -->
+      <div class="max-w-6xl mx-auto mb-16">
+        <h3 class="text-2xl font-bold text-blue-300 mb-6 text-center">Core Technologies</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Programming -->
+          <div class="skill-card bg-blue-800/50 p-6 rounded-lg backdrop-blur-sm transform hover:scale-105 transition duration-300">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-code text-3xl text-blue-400 mr-4"></i>
+              <h4 class="text-xl font-bold">Programming</h4>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <i class="fab fa-python text-blue-400 mr-2"></i>
+                <span>Python</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-blue-500/20 rounded text-sm">Advanced</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-code text-blue-400 mr-2"></i>
+                <span>C</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-blue-500/20 rounded text-sm">Advanced</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-code text-blue-400 mr-2"></i>
+                <span>C++</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-blue-500/20 rounded text-sm">Advanced</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-database text-blue-400 mr-2"></i>
+                <span>SQL</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-green-500/20 rounded text-sm">Learning</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- AI & ML -->
+          <div class="skill-card bg-blue-800/50 p-6 rounded-lg backdrop-blur-sm transform hover:scale-105 transition duration-300">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-brain text-3xl text-blue-400 mr-4"></i>
+              <h4 class="text-xl font-bold">AI & ML</h4>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <i class="fas fa-robot text-blue-400 mr-2"></i>
+                <span>TensorFlow</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-green-500/20 rounded text-sm">Learning</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-chart-line text-blue-400 mr-2"></i>
+                <span>Scikit-learn</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-green-500/20 rounded text-sm">Learning</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-language text-blue-400 mr-2"></i>
+                <span>NLP</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-green-500/20 rounded text-sm">Learning</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-network-wired text-blue-400 mr-2"></i>
+                <span>Neural Networks</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-green-500/20 rounded text-sm">Learning</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cloud & DevOps -->
+          <div class="skill-card bg-blue-800/50 p-6 rounded-lg backdrop-blur-sm transform hover:scale-105 transition duration-300">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-cloud text-3xl text-blue-400 mr-4"></i>
+              <h4 class="text-xl font-bold">Cloud & DevOps</h4>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <i class="fab fa-aws text-blue-400 mr-2"></i>
+                <span>AWS</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-green-500/20 rounded text-sm">Learning</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-google text-blue-400 mr-2"></i>
+                <span>GCP</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-green-500/20 rounded text-sm">Learning</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-microsoft text-blue-400 mr-2"></i>
+                <span>Azure</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-green-500/20 rounded text-sm">Learning</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-github text-blue-400 mr-2"></i>
+                <span>Git/GitHub</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-blue-500/20 rounded text-sm">Intermediate</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Specialized Skills -->
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold text-blue-300 mb-6 text-center">Specialized Areas</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Data Analytics -->
+          <div class="skill-card bg-blue-800/50 p-6 rounded-lg backdrop-blur-sm transform hover:scale-105 transition duration-300">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-chart-bar text-3xl text-blue-400 mr-4"></i>
+              <h4 class="text-xl font-bold">Data Analytics</h4>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <i class="fas fa-table text-blue-400 mr-2"></i>
+                <span>Pandas</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-blue-500/20 rounded text-sm">Intermediate</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-calculator text-blue-400 mr-2"></i>
+                <span>NumPy</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-blue-500/20 rounded text-sm">Intermediate</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-chart-line text-blue-400 mr-2"></i>
+                <span>Matplotlib</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-green-500/20 rounded text-sm">Learning</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- AI Applications -->
+          <div class="skill-card bg-blue-800/50 p-6 rounded-lg backdrop-blur-sm transform hover:scale-105 transition duration-300">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-microchip text-3xl text-blue-400 mr-4"></i>
+              <h4 class="text-xl font-bold">AI Applications</h4>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <i class="fas fa-comments text-blue-400 mr-2"></i>
+                <span>Chatbots</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-green-500/20 rounded text-sm">Learning</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-image text-blue-400 mr-2"></i>
+                <span>Computer Vision</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-green-500/20 rounded text-sm">Learning</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-robot text-blue-400 mr-2"></i>
+                <span>LLM Integration</span>
+                <div class="ml-auto">
+                  <span class="px-2 py-1 bg-green-500/20 rounded text-sm">Learning</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-16 px-8 bg-black text-gray-300">
+      <h2 class="text-3xl font-bold text-blue-400 mb-6 text-center">Certifications</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        
+        <!-- HackerRank Python Certificate -->
+        <div class="certificate-card bg-blue-900/30 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fab fa-hackerrank text-4xl text-blue-400 mr-4"></i>
+            <div>
+              <h3 class="text-xl font-bold">Python (Basic)</h3>
+              <p class="text-sm text-gray-400">HackerRank</p>
+            </div>
+          </div>
+          <p class="mb-4">Verified certification in Python programming fundamentals including data structures, algorithms, and problem-solving.</p>
+          <a href="https://www.hackerrank.com/certificates/c81b5549f4ad" target="_blank" class="text-blue-400 hover:text-blue-300 transition">View Certificate →</a>
+        </div>
+
+        <!-- Programming Hub Python Certificate -->
+        <div class="certificate-card bg-blue-900/30 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fab fa-python text-4xl text-blue-400 mr-4"></i>
+            <div>
+              <h3 class="text-xl font-bold">Python 3</h3>
+              <p class="text-sm text-gray-400">Programming Hub</p>
+            </div>
+          </div>
+          <p class="mb-4">Comprehensive certification in Python 3 programming covering advanced concepts and practical applications.</p>
+          <a href="https://storage.googleapis.com/programminghub/certificate%2F1716361001663.jpg" target="_blank" class="text-blue-400 hover:text-blue-300 transition">View Certificate →</a>
+        </div>
+
+        <!-- Coursera TensorFlow Certificate -->
+        <div class="certificate-card bg-blue-900/30 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fab fa-google text-4xl text-blue-400 mr-4"></i>
+            <div>
+              <h3 class="text-xl font-bold">TensorFlow CNN</h3>
+              <p class="text-sm text-gray-400">Google Cloud (Coursera)</p>
+            </div>
+          </div>
+          <p class="mb-4">Specialized certification in image classification using TensorFlow and Convolutional Neural Networks.</p>
+          <a href="https://www.coursera.org/account/accomplishments/verify/HW6LLGRTM37Q" target="_blank" class="text-blue-400 hover:text-blue-300 transition">View Certificate →</a>
+        </div>
+
+        <!-- Microsoft Azure AI Certifications -->
+        <div class="certificate-card bg-blue-900/30 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fab fa-microsoft text-4xl text-blue-400 mr-4"></i>
+            <div>
+              <h3 class="text-xl font-bold">Azure AI Fundamentals</h3>
+              <p class="text-sm text-gray-400">Microsoft Learn</p>
+            </div>
+          </div>
+          <p class="mb-4">Multiple certifications in Azure AI services, machine learning, and data analysis fundamentals.</p>
+          <a href="https://learn.microsoft.com/en-us/users/kashyapsinhgohil-6070/" target="_blank" class="text-blue-400 hover:text-blue-300 transition">View Certificates →</a>
+        </div>
+
+        <!-- Google Cloud Certifications -->
+        <div class="certificate-card bg-blue-900/30 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fab fa-google text-4xl text-blue-400 mr-4"></i>
+            <div>
+              <h3 class="text-xl font-bold">Google Cloud Skills</h3>
+              <p class="text-sm text-gray-400">Google Cloud</p>
+            </div>
+          </div>
+          <p class="mb-4">Various certifications in Google Cloud Platform services and cloud computing technologies.</p>
+          <a href="https://www.cloudskillsboost.google/public_profiles/45833038-bed4-438c-b26c-196234aa062d" target="_blank" class="text-blue-400 hover:text-blue-300 transition">View Profile →</a>
+        </div>
+
+        <!-- Tata Group Certificate -->
+        <div class="certificate-card bg-blue-900/30 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-certificate text-4xl text-blue-400 mr-4"></i>
+            <div>
+              <h3 class="text-xl font-bold">Data Analytics</h3>
+              <p class="text-sm text-gray-400">Tata Group</p>
+            </div>
+          </div>
+          <p class="mb-4">Professional certification in data analytics and visualization from Tata Group.</p>
+          <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Tata/MyXvBcppsW2FkNYCX_Tata%20Group_JGPWzqCxpPdTPZiXW_1719651473194_completion_certificate.pdf" target="_blank" class="text-blue-400 hover:text-blue-300 transition">View Certificate →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Projects Section -->
+    <section id="projects" class="py-16 px-8 bg-black text-gray-300">
+      <h2 class="text-3xl font-bold text-blue-400 mb-12 text-center">Featured Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <!-- Solveit Project -->
+        <div class="bg-blue-900/30 p-8 rounded-lg shadow-lg backdrop-blur-sm hover:transform hover:scale-105 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-box text-3xl text-blue-400 mr-4"></i>
+            <h3 class="text-2xl font-bold text-blue-400">Solveit</h3>
+          </div>
+          <p class="text-lg mb-4">A comprehensive Python package for data processing and problem-solving</p>
+          
+          <!-- Key Features -->
+          <div class="mb-6">
+            <h4 class="text-lg font-semibold text-blue-300 mb-2">Key Features:</h4>
+            <ul class="list-disc list-inside space-y-2 text-gray-400">
+              <li>Advanced data manipulation tools</li>
+              <li>Automated problem-solving algorithms</li>
+              <li>Comprehensive documentation</li>
+              <li>Regular updates and maintenance</li>
+            </ul>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="mb-6">
+            <h4 class="text-lg font-semibold text-blue-300 mb-2">Tech Stack:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-blue-500/20 rounded-full text-sm">Python</span>
+              <span class="px-3 py-1 bg-blue-500/20 rounded-full text-sm">NumPy</span>
+              <span class="px-3 py-1 bg-blue-500/20 rounded-full text-sm">Pandas</span>
+              <span class="px-3 py-1 bg-blue-500/20 rounded-full text-sm">PyPI</span>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div class="flex space-x-4">
+            <a href="https://github.com/KashyapSinh-Gohil/Solveit" 
+               class="flex items-center text-blue-400 hover:text-blue-300 transition" 
+               target="_blank">
+              <i class="fab fa-github mr-2"></i>
+              <span>Source Code</span>
+            </a>
+            <a href="https://kashyapsinh-gohil.github.io/Solveit-Web/" 
+               class="flex items-center text-blue-400 hover:text-blue-300 transition" 
+               target="_blank">
+              <i class="fas fa-book mr-2"></i>
+              <span>Documentation</span>
+            </a>
+            <a href="https://pypi.org/project/solveit" 
+               class="flex items-center text-blue-400 hover:text-blue-300 transition" 
+               target="_blank">
+              <i class="fas fa-box mr-2"></i>
+              <span>PyPI</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Add more project cards here -->
+      </div>
+    </section>
+
+    <!-- Enhanced Contact Section -->
+    <section id="contact" class="py-16 px-8 bg-gradient-to-t from-blue-900 to-black text-gray-300">
+      <h2 class="text-3xl font-bold text-blue-400 mb-6 text-center">Let's Connect</h2>
+      <p class="text-center mb-8 max-w-2xl mx-auto">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+      <div class="flex flex-col items-center space-y-4">
+        <a href="mailto:k.agohil000@gmail.com" class="bg-blue-500 text-white px-6 py-3 rounded-lg glowing hover:bg-blue-400 transition duration-300">
+          <i class="fas fa-envelope mr-2"></i>Email Me
+        </a>
+        <p class="text-lg text-gray-300 mt-4">
+          Let's collaborate and create something amazing together!
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Music control with improved positioning -->
+  <div class="music-control">
+    <button class="music-btn p-dynamic" id="musicToggle" title="Toggle Music">
+      <i class="fas fa-volume-mute"></i>
+    </button>
+    <audio id="bgMusic" loop preload="auto">
+      <source src="inspiring-cinematic-ambient-255033.mp3" type="audio/mp3">
+      <source src="assets/audio/inspiring-cinematic-ambient-255033.mp3" type="audio/mp3">
+    </audio>
+  </div>
+
+  <!-- Add this before closing </body> tag -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const musicToggle = document.getElementById('musicToggle');
+      const bgMusic = document.getElementById('bgMusic');
+      let isPlaying = false;
+      
+      // Set initial volume to be subtle
+      bgMusic.volume = 0.2;
+
+      // Update icon based on play state
+      function updateMusicIcon() {
+        musicToggle.innerHTML = isPlaying ? 
+          '<i class="fas fa-volume-up"></i>' : 
+          '<i class="fas fa-volume-mute"></i>';
+      }
+
+      // Try to autoplay when user interacts with the page
+      document.addEventListener('click', function initAudio() {
+        if (!isPlaying) {
+          bgMusic.play().then(() => {
+            isPlaying = true;
+            updateMusicIcon();
+            // Remove the listener after first interaction
+            document.removeEventListener('click', initAudio);
+          }).catch(error => console.log("Autoplay prevented:", error));
+        }
+      }, { once: true });
+
+      // Toggle music play/pause
+      musicToggle.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent triggering the document click handler
+        if (isPlaying) {
+          bgMusic.pause();
+        } else {
+          bgMusic.play().catch(console.log);
+        }
+        isPlaying = !isPlaying;
+        updateMusicIcon();
+      });
+
+      // Handle page visibility change
+      document.addEventListener('visibilitychange', function() {
+        if (document.hidden && isPlaying) {
+          bgMusic.pause();
+          isPlaying = false;
+          updateMusicIcon();
+        }
+      });
+    });
+  </script>
+</body>
+</html> 
