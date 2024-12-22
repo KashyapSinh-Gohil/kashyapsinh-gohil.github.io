@@ -254,6 +254,143 @@
     .music-btn:hover {
       transform: scale(1.1);
     }
+
+    /* Mobile Responsive Styles */
+    @media (max-width: 768px) {
+      /* Adjust hero section for mobile */
+      #hero .w-80 {
+        width: 60vw;
+        height: 60vw;
+        max-width: 280px;
+        max-height: 280px;
+      }
+
+      /* Adjust typography for mobile */
+      .text-4xl {
+        font-size: 1.75rem;
+      }
+      
+      .text-3xl {
+        font-size: 1.5rem;
+      }
+
+      .text-2xl {
+        font-size: 1.25rem;
+      }
+
+      /* Adjust padding and margins for mobile */
+      section {
+        padding: 3rem 1rem !important;
+      }
+
+      .px-8 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+
+      /* Adjust grid layouts for mobile */
+      .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+
+      /* Adjust buttons and links for mobile */
+      .space-x-4 > * {
+        margin: 0.5rem !important;
+      }
+
+      .space-x-4 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Adjust shortcut menu for mobile */
+      .shortcut-menu {
+        bottom: 1rem;
+        right: 1rem;
+      }
+
+      .shortcut-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      /* Hide tooltips on mobile */
+      .shortcut-btn::after,
+      .social-links a::after {
+        display: none;
+      }
+
+      /* Adjust music control for mobile */
+      .music-control {
+        bottom: 1rem;
+        left: 1rem;
+        padding: 6px 12px;
+      }
+
+      /* Improve touch targets */
+      .shortcut-btn,
+      .music-btn,
+      a {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Adjust card layouts */
+      .skill-card,
+      .certificate-card,
+      .project-card {
+        padding: 1rem !important;
+      }
+
+      /* Improve form elements for mobile */
+      input, 
+      textarea, 
+      button {
+        font-size: 16px !important; /* Prevent zoom on iOS */
+      }
+
+      /* Adjust navigation for mobile */
+      .fixed.top-0 {
+        padding: 0.5rem 1rem;
+      }
+
+      /* Hide email text on mobile, show only icon */
+      .hidden.sm\\:inline {
+        display: none;
+      }
+    }
+
+    /* Additional tablet-specific adjustments */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+
+      section {
+        padding: 4rem 2rem !important;
+      }
+    }
+
+    /* Landscape mode adjustments */
+    @media (max-height: 600px) and (orientation: landscape) {
+      #hero {
+        height: auto !important;
+        min-height: 100vh;
+        padding: 2rem 0;
+      }
+
+      #hero .w-80 {
+        width: 40vw;
+        height: 40vw;
+        max-width: 200px;
+        max-height: 200px;
+      }
+    }
   </style>
 </head>
 <body class="bg-black text-white font-sans leading-relaxed">
@@ -261,10 +398,10 @@
   <div id="top"></div>
 
   <!-- Add this right after the opening body tag -->
-  <div class="fixed bottom-8 right-8 z-50">
+  <div class="fixed bottom-8 right-8 z-50 md:bottom-8 md:right-8">
     <div class="shortcut-menu">
       <div class="bg-blue-900/90 backdrop-blur-md rounded-2xl shadow-2xl border border-blue-400/20">
-        <div class="flex flex-col space-y-3 p-4">
+        <div class="flex flex-col space-y-2 p-3 md:space-y-3 md:p-4">
           <!-- Updated home button with hero section ID -->
           <a href="#hero" class="shortcut-btn" id="homeBtn" title="Back to Top">
             <i class="fas fa-chevron-up"></i>
@@ -292,20 +429,17 @@
 
   <!-- Add this right after <body> tag -->
   <div class="fixed top-0 left-0 right-0 bg-blue-900/90 backdrop-blur-md z-50 border-b border-blue-400/20">
-    <div class="max-w-7xl mx-auto px-4 py-2">
-      <div class="flex justify-end items-center space-x-6">
+    <div class="max-w-7xl mx-auto px-3 py-2 md:px-4 md:py-2">
+      <div class="flex justify-between md:justify-end items-center space-x-4 md:space-x-6">
         <!-- Email -->
         <a href="mailto:k.agohil000@gmail.com" 
-           class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center text-sm">
+           class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center text-xs md:text-sm">
           <i class="fas fa-envelope mr-2"></i>
-          <span class="hidden sm:inline">k.agohil000@gmail.com</span>
+          <span class="hidden md:inline">k.agohil000@gmail.com</span>
         </a>
         
-        <!-- Vertical Divider -->
-        <div class="h-4 w-px bg-blue-400/20"></div>
-        
         <!-- Social Links -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-3 md:space-x-4">
           <a href="https://github.com/KashyapSinh-Gohil" 
              class="text-gray-300 hover:text-blue-400 transition-colors duration-300"
              target="_blank" 
@@ -345,8 +479,8 @@
 
   <main class="mt-24">
     <!-- Enhanced Hero Section -->
-    <section id="hero" class="h-screen flex flex-col justify-center items-center bg-gradient-to-br from-[var(--darker-blue)] to-[var(--dark-blue)] text-center px-4">
-      <div class="w-80 h-80 mb-8 relative group">
+    <section id="hero" class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-[var(--darker-blue)] to-[var(--dark-blue)] text-center px-4 py-16 md:py-0">
+      <div class="w-60 h-60 md:w-80 md:h-80 mb-8 relative group">
         <div class="absolute inset-0 bg-blue-400/10 rounded-full backdrop-blur-sm group-hover:bg-blue-400/20 transition-all duration-300"></div>
         <img 
           src="your-profile-photo.jpg" 
@@ -369,11 +503,11 @@
       </p>
       
       <!-- Buttons that appear after typing -->
-      <div class="space-x-4 opacity-0 animate-[fadeIn_0.8s_ease-in_2.5s_forwards]">
-        <a href="#projects" class="bg-blue-500 text-white px-6 py-3 rounded-lg glowing hover:bg-blue-400 transition duration-300">
+      <div class="space-x-4 opacity-0 animate-[fadeIn_0.8s_ease-in_2.5s_forwards] flex flex-wrap justify-center gap-4">
+        <a href="#projects" class="bg-blue-500 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg glowing hover:bg-blue-400 transition duration-300">
           <i class="fas fa-project-diagram mr-2"></i>View Projects
         </a>
-        <a href="#contact" class="border border-blue-500 text-blue-400 px-6 py-3 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300">
+        <a href="#contact" class="border border-blue-500 text-blue-400 px-4 py-2 md:px-6 md:py-3 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300">
           <i class="fas fa-envelope mr-2"></i>Contact Me
         </a>
       </div>
